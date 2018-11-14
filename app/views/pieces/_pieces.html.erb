@@ -1,0 +1,8 @@
+<% if @pieces.any? %>
+  <table>
+    <th>Grade</th><th>Quantity</th>
+      <%= render @pieces %>
+  </table>
+<% else %>
+  You have none of these coins yet.
+<% end %>

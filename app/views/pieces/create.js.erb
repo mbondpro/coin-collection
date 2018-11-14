@@ -1,0 +1,7 @@
+var pid = "<%= @piece.id %>";
+
+$('#error').hide('fast');
+$('#qty_table').html("<%=j raw(render partial: 'pieces') %>");
+$("#row" + pid).hide();
+$("#row" + pid).show('slow');
+$("#qty" + pid).addClass('highlight');

@@ -1,0 +1,21 @@
+%header
+  %span.logo
+    %h1= link_to 'My USA Coin', root_url
+    %h3 U.S. coin information and free collection software
+	  	
+  %nav#menu
+    %ul#menu1
+      %li= link_to 'Home', root_path
+      %li= link_to 'Help', help_path
+      - if signed_in?
+        %span#menu_in
+          %li= link_to 'My Collection', collection_path
+          %li= link_to "Sign Out", sign_out_path, :method => :delete
+      - else
+        %span#menu_out
+          %li= link_to "Sign In", sign_in_path
+          %li= link_to "Sign Up", sign_up_path
+    - if signed_in?
+      %span#user
+        Logged in as 
+        %em= current_user.username

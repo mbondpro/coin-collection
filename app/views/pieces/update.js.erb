@@ -1,0 +1,6 @@
+var pid = "<%= @piece.id %>";
+
+$('#error').hide('fast');
+$("#qty_table td").removeClass('highlight');
+$("#row" + pid).replaceWith("<%=j raw(render partial: 'piece', object: @piece) %>");
+$("#qty" + pid).addClass('highlight');

@@ -1,0 +1,17 @@
+<% @page_title = "Coin Categories" %>
+<h1>Coin Category List</h1>
+
+<table>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= link_to category, category %></td>
+    <% if admin? %>
+      <td><%= link_to 'Edit', edit_category_path(category) %></td>
+      <td><%= link_to 'Delete', category, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />

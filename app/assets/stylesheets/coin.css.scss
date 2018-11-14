@@ -1,0 +1,164 @@
+#status {  /* Status bar */
+	
+	width: 280px;
+	height: 40px;
+	margin-bottom: 5px;
+	padding: 10px;
+	font-size: 123.1%;
+	font-weight: normal;
+	background: #EEE8CD;
+	color: #00008B;	
+	text-align: center;	
+	border: 1px dashed #00008B;
+	
+}
+
+#status.wide {
+	width: 95%;
+	min-width: 600px;	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.welcome {
+    margin-bottom: 25px;
+    font-size: 120%;
+}
+
+.detail .left {
+	width: 45%;
+	float: left;
+}
+
+.detail .right {
+	width: 45%;
+	float: right;
+}
+
+.auctions {
+	clear: both;
+	padding: 25px 0 0 0;
+}
+
+
+.dual_pic_list ul {
+	display: inline;
+	text-align: center;
+}
+
+.dual_pic_list li {
+	float: left;
+	padding: 1px;
+	width: 160px;
+	font-size: 80%;
+}
+
+.contributor {
+	font-size: 10px;
+}
+
+.button_to, .button_to div {
+	display: inline;
+}
+
+/* **********  */
+
+div.dual {
+	text-align: left;
+	max-width: 80%;
+	margin: 10px;
+	padding: 10px;
+		
+}
+
+div.dual p {
+	line-height: 1.4;
+	max-width: 40%;
+	float: left;
+	padding: 10px;
+	margin: 2px;
+
+}
+
+#news {
+	min-height: 215px;		
+}
+
+
+/* Gallery */
+
+.gallery ol {
+  list-style: none;
+  line-height: normal;
+}
+
+.gallery li {
+  float: left;
+  margin: 3px;
+  padding: 5px;
+  text-align: center;
+  border: 1px dotted gray;
+  width: 200px;
+  height: 185px;
+}
+
+.gallery li img {
+  max-height: 100px;
+  max-width: 115px;
+}
+
+.pic {
+  text-align:center;
+  padding:0px;
+}
+
+.pic_box ul {
+  list-style: none;
+  text-align: center;
+}
+
+.pic_box li {
+  float: left;
+  margin: 2px 2px 2px 2px;
+  padding: 2px 2px 2px 2px;
+  text-align: center;
+  border: 1px dotted DarkRed;
+  width: 225px;
+  height: 135px;	
+	overflow: hidden;	
+}
+
+.pic_box a {
+	font-size: 12px;
+}
+
+.sm_pic {
+	max-height: 100px; 
+	max-width: 115px;	
+}
+
+.med_pic {
+	max-height: 100px; 
+	max-width: 115px;	
+}
+
+.lg_pic {
+	max-width: 700px;	
+}
+
+
+.coinlist {
+	width: 800px;
+	margin: 0;
+	padding: 0;
+}
+
+.coinlist li {    
+	width: 15%;
+	border: 1px solid DarkRed;
+	text-align: center;    
+	margin: 0;
+	padding: 0;
+}

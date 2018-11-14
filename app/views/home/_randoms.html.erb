@@ -1,0 +1,8 @@
+<ul>
+	<% Coin.random(6).has_pics.each do |coin| %>
+    <li>
+    	<%= link_to (image_tag coin.pics.first.pic.url, class: "sm_pic", :alt => coin), coin %><br/>
+      <b><%= link_to coin.full_name_with_parent, coin %></b>
+    </li>
+  <% end %>
+</ul>

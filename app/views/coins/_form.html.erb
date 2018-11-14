@@ -1,0 +1,24 @@
+<p>
+  <%= f.label "Category (required)" %><br />
+  <%= f.select(:category_id, @categories, {:prompt => "Choose a category" }, { "style" => "width:300px" } )  %>
+</p>
+<p>
+  <%= f.label "Year (required)" %><br />
+  <%= f.text_field :year %>
+</p>  
+<p>
+  <%= f.label :mint %><br />
+  <%= f.text_field :mint %>
+</p>
+<p>
+  <%= f.label "Name (any special name associated with the coin)" %><br />
+  <%= f.text_field :name %>
+</p>  
+<p>
+  <%= f.label "Feature (special variation of the standard coin for this year)" %><br />
+  <%= f.text_field :feature %>
+</p>
+<p>
+  <%= f.label "Mintage (how many coins were minted)" %><br />
+  <%= f.text_field :mintage %>
+</p>

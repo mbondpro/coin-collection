@@ -1,0 +1,1 @@
+Rails.application.config.cookie_secret = '97a64125ccba9cc18e44421230ea4e0aee7ced0f00454eb23b99b261e56ae2d3700bd48de6855d6942c84f6cb4f0a310fa0f072e14e90b24a5d1d4b94a3dd0ff'

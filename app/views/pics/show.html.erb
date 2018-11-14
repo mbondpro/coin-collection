@@ -1,0 +1,10 @@
+<% @page_title = "Coin Photo: #{@coin}" %>
+<h1>Coin Photo</h1>
+<% unless @coin.category.blank? %>
+  <%= render :partial => 'shared/crumb', :object => @coin.crumb_path(@coin, ['All pics', coin_pics_path(@coin)]) %>
+<% end %>
+
+<%= @pic.try(:caption) %>
+<p><%= link_to (image_tag @pic.pic.url(:medium), class: 'lg_pic', :alt => @pic.default_caption), coin_pics_path(@coin) %>
+</p>
+<%= contributor_link(@pic) %>

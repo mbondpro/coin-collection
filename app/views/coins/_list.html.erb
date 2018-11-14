@@ -1,0 +1,18 @@
+<%= will_paginate @coins %>
+<div id="list">
+	<table>
+		<tr>
+		  <th>Photo</th>
+		  <th>Year/Mint</th>
+		  <th>Feature</th>
+		  <% if signed_in? %>
+		    <th>My Count</th>
+		    <th>Add/Remove</th>
+		  <% end %>
+		</tr>
+
+<%= render @coins %>
+
+	</table>
+</div>
+<%= will_paginate @coins %>

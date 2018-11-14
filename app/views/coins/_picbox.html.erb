@@ -1,0 +1,8 @@
+<%= render :partial => 'pics/dual', :object => @pics if @pics.any? %>
+
+<% if signed_in? %>
+	<%= render :partial => 'pics/dual', :object => @user_pics if @user_pics.any? %>
+  <p><%= link_to "Add pictures", new_coin_pic_url(@coin) %></p>
+<% end %>
+
+

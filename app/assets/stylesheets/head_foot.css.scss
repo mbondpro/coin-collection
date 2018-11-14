@@ -1,0 +1,39 @@
+header {
+  height: 100px;
+	min-width: 800px;
+	background: url(logo_coin.jpg) no-repeat left top;
+
+  .logo {
+    width: 320px;
+    float: left;
+    margin: 0.5em 0 0 1.5em;
+	  font: $header-font;
+
+    h1 {
+	    margin: 5px 0 0 85px;
+	    font: normal 180%;
+	    background: none;
+	    text-align: left;
+
+      a {
+	      color: #8B0000;
+	      text-decoration: none;
+      }
+    }
+
+    h3 {
+	    margin: 0 0 0 85px;
+	    font: bold 77%;
+    }
+  }
+
+}
+
+footer {
+	clear: both;
+	margin: 40px 0 0 0;
+	background: #8B0000;
+	text-align: center;
+	color: #FFF8DC;
+  @include rounded;
+}

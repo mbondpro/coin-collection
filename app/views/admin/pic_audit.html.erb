@@ -1,0 +1,22 @@
+<% @page_title = "Admin - Picture Audit" %>
+<h2>Administration Tasks - Picture Audit</h2>
+
+<%# link_to 'Attempt to fix all', :url => {:controller=> :admin, :action => :fix_pics}, :remote => true %><br/><br/>
+
+Coins that have photos in the DB but missing files:
+<table>
+  <tr><th>Coin ID</th><th>Coin Name</th><th>Pic ID</th><th>Picture URL</th><th>Delete</th></tr>
+
+  <% @pics.each do |pic| %>
+    <tr>
+      <td><%= link_to pic.coin.id, pic.coin %></td>
+      <td><%= pic.coin %></td>
+      <td><%= link_to pic.id, coin_pic_path(pic.coin, pic.id) %></td>
+      <td><%= link_to pic.pic.url, pic.pic.url %></td>
+      <td><%= link_to 'Delete', coin_pic_path(pic.coin, pic.id), :confirm => 'Delete pic: Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+
+</table>
+<br /><br />
+<div id="fixes"></div>

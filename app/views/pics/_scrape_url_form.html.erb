@@ -1,0 +1,10 @@
+<% if admin? %>
+  <%= form_for(@pic) do |f| %>
+    <p>
+      <%= f.label 'New pic from URL' %>
+      <%= f.text_field :page_url %>
+      <%= f.submit 'Upload' %>
+      <%= f.hidden_field :coin_id, :value => @coin.id %>
+    </p>
+  <% end %>
+<% end %>

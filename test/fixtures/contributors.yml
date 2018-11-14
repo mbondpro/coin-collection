@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+myusacoin:
+  name: My USA Coin
+  url: www.myusacoin.com
+
+coingallery:
+  name: Coin Gallery
+  url: www.coinandstampgallery.com

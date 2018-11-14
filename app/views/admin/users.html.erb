@@ -1,0 +1,36 @@
+<% @page_title = "Admin - Users" %>
+<h2>User List</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Created</th>
+    <th>Updated</th>
+    <th>Pieces</th>
+    <th>Pics</th>
+  </tr>
+
+<% User.all.each do |user| %>
+  <tr>
+    <td><%=h user.id %></td>
+    <td
+      <% if user.admin? %>
+        style="color: Red"
+      <% end %>
+      >
+        <%=h user.username %>      
+    </td>
+    <td><%=h user.name %></td>
+    <td><%=h user.email %></td>
+    <td><%=h user.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%=h user.updated_at.strftime("%m/%d/%Y") %></td>
+    <td><%=h user.collection.pieces.size %></td>
+    <td><%=h user.pics.size %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -1,0 +1,12 @@
+Category.create(:id => 1001, :parent_id => :null, :name => 'Small Cents', :years => '1856-now', :official => true)
+Category.create(:id => 2, :parent_id => 1001, :name => 'Flying Eagle', :years => '1856-1858', :official => true)
+Category.create(:id => 3, :parent_id => 1001, :name => 'Indian Head', :years => '1859-1909', :official => true)
+Category.create(:id => 4, :parent_id => 1001, :name => 'Lincoln Wheat', :years => '1909-1958', :official => true)
+Category.create(:id => 5, :parent_id => 1001, :name => 'Lincoln Memorial', :years => '1959-Now', :official => true)
+
+Category.create(:id => 1002, :parent_id => :null, :name => 'Large Cents', :years => '1793-1857', :official => true)
+Category.create(:id => 6, :parent_id => 1002, :name => 'Early', :years => '1793-1796', :official => true)
+Category.create(:id => 7, :parent_id => 1002, :name => 'Draped Bust', :years => '1796-1807', :official => true)
+Category.create(:id => 8, :parent_id => 1002, :name => 'Classic Head', :years => '1808-1814', :official => true)
+Category.create(:id => 9, :parent_id => 1002, :name => 'Coronet Head', :years => '1816-1839', :official => true)
+Category.create(:id => 10, :parent_id => 1002, :name => 'Braided Hair', :years => '1840-1857', :official => true)

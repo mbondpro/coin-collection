@@ -1,0 +1,14 @@
+<% @page_title = "Edit Coin Photo: #{@coin.full_name_with_parent}" %>
+<h1>Picture Upload</h1>
+<%= render :partial => 'shared/crumb', :object => [@coin.category, @coin, ['All Pics', coin_pics_path(@coin)]] %>
+
+<%= image_tag @pic.url %><br/>
+Replace this picture for <b><%= @coin.full_name %></b> -
+<%= link_to 'Back to coin', coin_path(@coin) %><br/><br/>
+
+<%= form_for(@pic, :html => { :multipart => true }) do |f| %>
+  <%= render :partial => 'pic', :object => @pic, :locals => {:f => f}  %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

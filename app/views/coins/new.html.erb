@@ -1,0 +1,10 @@
+<% @page_title = "Define a New Coin New Coin" %>
+<h1>Define a New Coin</h1>
+You may define a new coin below if it does not appear in our catalog. 
+Choose the category and add the coin's details.
+<%= form_for(@coin) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

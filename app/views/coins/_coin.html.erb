@@ -1,0 +1,17 @@
+<tr>
+  <td class="small_pic">
+    <%= link_to(image_tag(coin.main_pic, class: 'sm_pic', alt: "Pic: " + coin.year_mint ), coin) %>
+  </td>
+  <td class="year"><%= link_to coin.year_mint, coin %></td>
+  <td><%= coin.feature %></td>
+
+  <% if signed_in? %>
+    <td id="qty<%= coin.id -%>" class="qty">
+    	<%= coin.qty %>
+    </td>
+    <td class="buttons">        
+			<%= button_to('+', coin_pieces_url(coin, @piece, page: 'coin'), remote: true, name: 'sign' ) %>
+		  <%= button_to('-', coin_pieces_url(coin, @piece, page: 'coin'), remote: true, name: 'sign' ) %>
+    </td>
+  <% end %>
+</tr>

@@ -1,0 +1,13 @@
+<li>
+  <% if cat.top? %>
+    <br/>
+  <% else %>
+    <%= carrot -%>
+  <% end %>
+
+  <%= link_to_unless cat.coins.empty?, cat.name_dates, category_coins_path(cat) %>
+
+  <% unless cat.children.empty? %>
+      <%= render :partial => 'categories/cat', :collection => cat.children %>
+  <% end %>
+</li>

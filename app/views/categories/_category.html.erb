@@ -1,0 +1,8 @@
+<li>
+  <%= carrot unless category.top_level? -%>
+  <% if category.coins.empty? %>
+      <%= link_to category.name_dates, category %>
+  <% else %>
+    <%= link_to category.name_dates, category_coins_path(category) %>
+  <% end %>
+</li>

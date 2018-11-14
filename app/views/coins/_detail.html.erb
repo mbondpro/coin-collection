@@ -1,0 +1,25 @@
+<% if admin? || detail.owned_by?(current_user) %>
+  <%= link_to 'Edit Coin', edit_coin_path(detail) %>
+<% end %>
+
+<table class="detail" >
+  <tr>
+     <td>Category:</td>
+     <td><b><%= detail.category.name unless detail.category.nil?%></b></td>
+  </tr>
+  <tr>
+    <td>Year/Mint:</td><td><b><%= detail.year_mint %><b></td>
+  </tr>
+  <tr>
+    <td>Name:</td><td><b><%= detail.name %><b></td>
+  </tr>
+  <tr>
+    <td>Feature:</td><td><b><%= detail.feature %><b></td>
+  </tr>
+  <tr>
+    <td>Mintage:</td><td><%= number_with_delimiter(detail.mintage) %></td>
+  </tr>
+  <tr>
+    <td>Catalog ID:</td><td><%= detail.id %></td>
+  </tr>
+</table>

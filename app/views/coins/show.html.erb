@@ -1,0 +1,24 @@
+<% @page_title = @coin.full_name_with_parent %>
+<h1>Coin Details</h1>
+<%= render partial: 'shared/crumb', object: @coin.crumb_path %>
+
+<div class="detail">
+	<div class="left">
+		<%= render partial: 'detail', object: @coin %>
+
+		<% if signed_in? %>
+			<%= render partial: 'add_coin', object: @coin %>
+		<% end %>
+	</div>
+
+	<div id="pics" class="right">
+		<%= render partial: 'picbox', object: @pics %>
+	</div>
+</div>
+
+<div class="auctions">  
+	<h2>Current eBay Auctions</h2>
+	<span id="results">Loading Auctions...</span>
+	<%= javascript_tag "auctions(#{@coin.id});" %>
+</div>
+

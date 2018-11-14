@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  category_id: 1
+  user_id: 1
+  name: Coin One
+  mint: 
+  year: 2009
+  feature: MyString
+  mintage: 100000
+  history: Fake history
+
+two:
+  category_id: 1
+  user_id: 1
+  name: Coin Two
+  mint: P
+  year: 2010
+  feature: MyString
+  mintage: 100000
+  history: 

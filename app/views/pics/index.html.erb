@@ -1,0 +1,22 @@
+<% @page_title = "Coin Photos: #{@coin.full_name}" %>
+<h1>Coin Photos</h1>
+
+<%= render :partial => 'shared/crumb', :object => @coin.crumb_path(@coin) %>
+
+<p>
+<% if signed_in? %>
+  <%= link_to "Add pictures", new_coin_pic_url(@coin) %>
+<% end %>
+</p>
+
+<%# render :partial => 'scrape_url_form', :object => @coin.crumb_path(@coin) %>
+
+<%= will_paginate @pics %>
+
+<% if @pics.any? %>
+	<%= render :partial => 'gallery', :object => @pics %>
+<% else %>
+  There are no pictures for this coin yet.
+<% end %>
+
+<%= will_paginate @pics %>

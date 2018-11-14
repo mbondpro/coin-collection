@@ -1,0 +1,18 @@
+<% @page_title = "Coin Collections" %>
+<h1>U.S. coins to add to your collection</h1>
+<div class="pic_box">
+	<%# cache 'random' do %>
+ 		<%= render :partial => 'randoms' %>
+	<%# end %>
+</div>
+<div style="clear:both;"></div>
+
+<h1>Get Started with My USA Coin</h1>
+<div class="welcome">
+	<h3>* Browse U.S. coin categories to the right for more coin information</h3>
+	<h3>* View auctions on coin pages to buy gold & silver coins and more</h3>	
+	<h3>* <%= link_to "Sign Up", sign_up_path -%> and <%= link_to "sign in", sign_in_path -%> to create your collection</h3>
+	<h3>* Add U.S. coins to your collection from coin lists & detail pages</h3>
+	<h3>* Add your own photos of U.S. coins on the coin detail page</h3>
+</div>
+

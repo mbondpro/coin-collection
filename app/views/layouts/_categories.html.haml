@@ -1,0 +1,5 @@
+%nav#categories
+  - cache 'categories' do
+    %h1 Categories
+    %ul#categories
+      = render :partial => 'categories/cat', :collection => Category.where(:parent_id => nil), :as => :cat

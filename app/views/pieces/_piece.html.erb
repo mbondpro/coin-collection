@@ -1,0 +1,8 @@
+<tr id="row<%= piece.id -%>">
+  <td><%= piece.grade_or_blank %></td>
+  <td id="qty<%= piece.id -%>"><%= piece.quantity %></td>
+  <td class="buttons">
+	  <%= button_to('+', coin_piece_url(@coin, piece), remote: true, name: 'sign', :method => :put ) %>
+    <%= button_to('-', coin_piece_url(@coin, piece), remote: true, name: 'sign', :method => :put ) %>
+  </td>
+</tr>

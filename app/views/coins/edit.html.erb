@@ -1,0 +1,10 @@
+<% @page_title = "Edit #{@coin.full_name}" %>
+<h1>Edit Coin</h1>
+<%= render :partial => 'shared/crumb', :object => @coin.crumb_path %>
+
+<%= form_for(@coin) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

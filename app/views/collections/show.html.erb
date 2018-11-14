@@ -1,0 +1,10 @@
+<h1>My Collection</h1>
+
+<p>These are all the coins in your collection.</p>
+
+<% if @coins.any? %>
+	<%= render 'coins/list' %>
+<% else %>
+  There are currently no coins in this list.
+<% end %>
+

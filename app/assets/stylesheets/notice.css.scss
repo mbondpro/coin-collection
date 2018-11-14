@@ -1,0 +1,47 @@
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin-left: 10px;
+}
+
+#notice, #success { background-color: #A4E7A0; border: 1px solid #26722D; }
+#error, #failure { background-color: #F0A8A8; border: 1px solid #900; }
+#notice, #success, #error, #failure { width: 95%; padding: 5px; }
+#notice p, #success p, #error p, #failure p { margin-left: 20px; margin: 0 auto 10px auto; padding: 0; }
+#notice a, #success a, #error a, #failure p { text-decoration: none; }
+#notice a { border: 1px solid #26722D; color: #26722D; }
+#error a { border: 1px solid #900; color: #900; }
+#notice a:hover, #error a:hover, #failure a:hover { color: #333; border: 1px solid #333; }
+
+

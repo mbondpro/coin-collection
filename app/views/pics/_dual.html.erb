@@ -1,0 +1,9 @@
+<ul class="dual_pic_list">
+	<% dual.try(:each) do |pic| %>
+		<li>
+			<%= link_to (image_tag pic, class: "sm_pic", :alt => pic.default_caption), coin_pic_url(@coin, pic) %>
+			<p><%= contributor_link(pic) %></p>
+		</li>
+	<% end %>
+</ul>
+<p><%= link_to "See all pictures", coin_pics_url(@coin) %></p>

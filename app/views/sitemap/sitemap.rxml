@@ -1,0 +1,91 @@
+base_url = "http://#{request.host_with_port}"
+per_page = 4
+
+xml.instruct!
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+
+  ['home', 'help'].each do |contr|
+    xml.url do
+      xml.loc url_for(:controller => contr,
+                      :action => :index,
+                      :only_path => false)
+      xml.lastmod Date.today
+      xml.priority 1 if contr=='home'
+      xml.priority 0.1 if contr=='help'
+    end
+  end
+
+  @categories.each do |item|
+    pages = (item.coins.length / per_page.to_f).ceil
+    page = 1
+    pages.times do
+      xml.url do
+        if page == 1
+          xml.loc "#{base_url}/categories/#{item.to_param}/coins"
+        else
+          xml.loc "#{base_url}/categories/#{item.to_param}/coins/page/#{page}"
+        end
+        
+        unless item.updated_at.blank?
+          xml.lastmod item.updated_at.to_date
+        else
+          xml.lastmod Date.today
+        end
+
+        xml.priority 0.6        
+      end
+      page += 1
+    end
+  end
+
+  @coins.each do |item|
+    #do coin pages
+    xml.url do
+      xml.loc "#{base_url}/coins/#{item.to_param}"
+      
+      unless item.updated_at.blank?
+        xml.lastmod item.updated_at.to_date
+      else
+        xml.lastmod Date.today
+      end
+
+      xml.priority 0.5
+    end
+
+    #do pics gallery pages
+    pages = (item.pics.length / per_page.to_f).ceil
+    page = 1
+    pages.times do      
+      xml.url do
+        if page == 1
+          xml.loc "#{base_url}/coins/#{item.to_param}/pics"
+        else
+          xml.loc "#{base_url}/coins/#{item.to_param}/pics/page/#{page}"
+        end
+
+        unless item.updated_at.blank?
+          xml.lastmod item.updated_at.to_date
+        else
+          xml.lastmod Date.today
+        end
+
+        xml.priority 0.4
+      end
+      page += 1
+    end
+  end
+
+  @pics.each do |item|
+    xml.url do
+      xml.loc "#{base_url}/coins/#{item.coin.to_param}/pics/#{item.to_param}"
+
+      unless item.updated_at.blank?
+        xml.lastmod item.updated_at.to_date
+      else
+        xml.lastmod Date.today
+      end
+
+      xml.priority 0.3
+    end
+  end
+end

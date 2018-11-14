@@ -1,0 +1,19 @@
+<h1>Editing contributor</h1>
+
+<%= form_for(@contributor) do |f| %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_area :url %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contributor %> |
+<%= link_to 'Back', contributors_path %>

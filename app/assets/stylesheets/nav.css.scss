@@ -1,0 +1,56 @@
+nav#menu {
+  font: 120% Tahoma, "Times New Roman", Times, serif;
+	color: #00008B;
+  min-width: 280px;
+  float: right;
+	text-align: right;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    background: #8B0000;
+    @include rounded;
+  }
+
+  li {
+	  display: inline;
+  }
+
+  p {
+	  background: none;
+  }
+
+  a {
+	  padding: 10px;
+	  text-decoration: none;
+	  font: Tahoma, Arial, Helvetica, sans-serif;
+	  color: #FFF8DC;
+
+    &:hover {
+	    text-decoration: underline;
+    }
+  }
+}
+
+nav#categories {
+	float: right;
+	width: 230px;
+
+  li {
+	  text-align: left;
+	  color: #00008B;	
+	  font-weight: bold;
+
+    a {
+	      color: black;
+	      background: white;
+	      font-weight: normal;
+    }  
+  } 
+
+  .status {  /* unused */
+	  background:	#FFD39B;
+  }
+}
+
+

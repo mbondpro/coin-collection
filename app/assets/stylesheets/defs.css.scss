@@ -1,0 +1,9 @@
+$fonts: 'Arial', 'Helvetica', sans-serif;
+$header-font: 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+
+@mixin rounded {
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  -khtml-border-radius: 5px; 
+  border-radius: 5px;
+}

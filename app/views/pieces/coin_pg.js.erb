@@ -1,0 +1,5 @@
+var cid = "<%= @coin.id %>";
+
+$("#list td").removeClass('highlight');
+$("#qty" + cid).text("<%= @coin.qty %>");
+$("#qty" + cid).addClass('highlight');

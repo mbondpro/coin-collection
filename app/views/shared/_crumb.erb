@@ -1,0 +1,16 @@
+<div>
+  <p>
+    Back to
+    <% crumb.each do |l| %>        
+        <% if l.is_a?(Array) %>
+          <%= carrot %>
+          <b><%= link_to l[0], l[1] %></b>
+        <% else %>
+          <% unless l.nil? %>
+            <%= carrot %>
+            <b><%= link_to l, l %></b>
+          <% end %>
+        <% end %>
+    <% end %>
+  </p>
+</div>

@@ -1,0 +1,12 @@
+<% @page_title = "New Coin Photo: #{@coin.full_name_with_parent}" %>
+<h1>Picture Upload</h1>
+<%= render :partial => 'shared/crumb', :object => [@coin.category, @coin, ['All Pics', coin_pics_path(@coin)]] %>
+
+<p>Upload a picture for <b><%= @coin.full_name %></b></p>
+
+<%= form_for(@pic, :html => { :multipart => true }) do |f| %>
+  <%= render :partial => 'pic', :object => @pic, :locals => {:f => f}  %>
+  <p>
+    <%= f.submit 'Upload' %>
+  </p>
+<% end %>

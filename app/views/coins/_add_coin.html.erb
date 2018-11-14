@@ -1,0 +1,17 @@
+<h2>In My Collection</h2>
+<div id="add_coin">
+	Add this coin to your collection below. 
+	You may optionally designate a grade using the drop-down box.<br/>
+	<%= form_for([@coin, @piece], :remote => true) do |f| %>
+		<%= f.label :grade %>
+	  <%= f.select(:grade, Piece::GRADES) %>
+	  <%= f.submit '+' %>
+	<% end %>
+
+	<div id="error" class="hidden"></div>
+</div>
+
+<div id="qty_table">
+	<%= render partial: 'pieces/pieces' %>
+</div>
+

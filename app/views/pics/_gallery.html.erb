@@ -1,0 +1,18 @@
+<div class="gallery">
+  <ol>
+  <% for @pic in gallery %>
+    <li id="pic_<%= @pic.id %>">
+      <%= @pic.caption %>
+      <p><%= link_to(image_tag(@pic.pic.url(:thumb), :alt => @pic.default_caption), coin_pic_path(@coin, @pic)) %></p>
+      <%= contributor_link(@pic) %>      
+      <% if admin? || @pic.owned_by?(current_user) %>
+		    <p>
+					<%= link_to 'Edit', edit_coin_pic_path(@coin, @pic) %> -
+			    <%= link_to 'Delete', coin_pic_path(@coin, @pic), :confirm => 'Delete pic: Are you sure?', :method => :delete %>
+				</p>
+      <% end %>
+    </li>
+  <% end %>
+  </ol>
+</div>
+<div style="clear:both;"></div>

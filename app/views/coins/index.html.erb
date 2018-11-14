@@ -1,0 +1,10 @@
+<% @page_title = @category %>
+<h1><%= @category %></h1>
+
+<%= @category.history %>
+
+<% if @coins.any? %>
+	<%= render 'coins/list' %>
+<% else %>
+  There are currently no coins in this list.
+<% end %>

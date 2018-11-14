@@ -1,0 +1,22 @@
+<h1>Listing contributors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+  </tr>
+
+<% @contributors.each do |contributor| %>
+  <tr>
+    <td><%= contributor.name %></td>
+    <td><%= contributor.url %></td>
+    <td><%= link_to 'Show', contributor %></td>
+    <td><%= link_to 'Edit', edit_contributor_path(contributor) %></td>
+    <td><%= link_to 'Destroy', contributor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New contributor', new_contributor_path %>

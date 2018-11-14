@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+small:
+  id: 101
+  parent_id: null
+  user_id: 1
+  name: Small Cent
+  official: 1
+
+eagle:
+  id: 1
+  parent_id: 101
+  user_id: 1
+  name: Flying Eagle
+  official: 1
+  
+indian:
+  id: 2
+  parent_id: 101
+  user_id: 1
+  name: Indian Head
+  official: 1

@@ -1,0 +1,9 @@
+  <p>
+    <%= f.label "Caption (optional)" %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.label 'Picture' %><br />
+    <%= f.file_field :pic %>
+  </p>
+  <%= f.hidden_field :coin_id, :value => params[:coin_id] %>

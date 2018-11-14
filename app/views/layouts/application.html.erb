@@ -1,0 +1,37 @@
+<html>
+<html>
+<head>
+  <%= page_title %>
+  <meta charset="utf-8" />
+  <%= meta "description", meta_description %>
+  <%= meta "keywords", meta_keywords %>
+  <%= stylesheet_link_tag 'application' %>
+	<%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="container">
+
+<%= render 'layouts/header' %>
+
+<div id="flash">
+  <%- flash.each do |key, msg| -%>
+	  <div id="<%= key %>">
+	    <p><%= msg %></p>
+	    <div class="clear"></div>
+	  </div>
+  <%- end -%>
+</div>
+
+<section id="maincontent">
+	<%= yield %>
+</div>
+
+<%= render 'layouts/categories' %>
+<%= render 'layouts/footer' %>
+
+</div>
+
+</body>
+</html>
